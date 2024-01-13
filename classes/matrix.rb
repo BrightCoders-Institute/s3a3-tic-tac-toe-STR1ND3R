@@ -45,8 +45,4 @@ class Matrix
   def write(x_pos, y_pos, char)
     @matrix[y_pos][x_pos] = char if @matrix[y_pos][x_pos] == ' '
   end
-
-  def full?(arr)
-    !arr.include?(' ')
-  end
 end

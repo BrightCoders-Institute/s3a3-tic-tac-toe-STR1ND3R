@@ -2,6 +2,7 @@
 
 require_relative 'matrix'
 
+# The Matrix class is responsible for the tictactoe game functioning
 class Game < Matrix
   def initialize
     super
@@ -37,7 +38,7 @@ class Game < Matrix
   end
 
   def check_vector(vec)
-    full?(vec) && vec.uniq.size == 1
+    !vec.include?(' ') && vec.uniq.size == 1
   end
 
   def space_left?
